@@ -1,0 +1,14 @@
+.\" Manpage for _printf.
+.TH _printf Manpage
+.SH NAME
+_printf \- read and print arguments acording a opertion.
+.SH SYNOPSIS
+_printf [USERNAME]
+.SH DESCRIPTION
+_printf is low level shell program for read and print arguments acording the operation selected.
+.SH OPTIONS
+The _printf does calculator operations. 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+
