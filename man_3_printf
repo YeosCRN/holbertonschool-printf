@@ -1,14 +1,25 @@
-.\" Manpage for _printf.
+./" Manpage _printf
+_printf - format and print data.
 .TH _printf Manpage
-.SH NAME
-_printf \- read and print arguments acording a opertion.
-.SH SYNOPSIS
-_printf [USERNAME]
-.SH DESCRIPTION
-_printf is low level shell program for read and print arguments acording the operation selected.
-.SH OPTIONS
-The _printf does calculator operations. 
-.SH BUGS
-No known bugs.
-.SH AUTHOR
 
+.SH SYNOPSIS
+    _printf [ARGUMENT]
+    Manpage for _printf command.
+
+.SH DESCRIPTION
+    Prints required argument depending on the format set for said argument.
+    
+.SH FORMAT
+
+        %c Prints a single character.
+        %s Prints a string.
+        %d Prints numbers in decimal format.
+        %i Prints an integer.
+
+.SH NOTE: 
+    This is a pseudo command inspired in printf, as such, this command does not have all formats printf possesses
+.SH BUGS
+    No known bugs.
+.SH AUTHOR
+    Jerson Riascos 5828
+    Cristhian Jurado 5860
