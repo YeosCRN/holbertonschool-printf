@@ -41,12 +41,12 @@ int print_string(va_list str)
 }
 /**
  * print_number - function to print numbers
- * @totals: list
+ * @nums: list
  * Return: space
  */
-int print_number(va_list totals)
+int print_number(va_list nums)
 {
-	int n = va_arg(totals, int), n2 = n, n3 = n, j = 0, i = 0, dig_count = 0;
+	int n = va_arg(nums, int), n2 = n, n3 = n, j = 0, i = 0, dig_count = 0;
 	char num[] = "12345678910", dig;
 
 	if (n == 0)
@@ -89,15 +89,15 @@ int print_number(va_list totals)
 }
 /**
  * print_binary - function to print binary numbers
- * @nums: list
+ * @numsb: list
  * Return: space
  */
-int print_binary(va_list nums)
+int print_binary(va_list numsb)
 {
 	unsigned int n, n2, i = 0, dig_count = 0;
 	char num[33], dig, aux[33];
 
-	n = va_arg(nums, unsigned int);
+	n = va_arg(numsb, unsigned int);
 	n2 = n;
 	do {
 		dig = (n2 % 2) + '0';
@@ -105,6 +105,33 @@ int print_binary(va_list nums)
 		i++;
 		dig_count++;
 		n2 = n2 / 2;
+	} while (n2 != 0);
+	i = 0;
+	for (; i < dig_count; i++)
+	{
+		num[i] = aux[dig_count - i - 1];
+		write(1, &num[i], 1);
+	}
+	return (dig_count);
+}
+/**
+ * print_octal - function to print octal numbers
+ * @numso: list
+ * Return: space
+ */
+int print_octal(va_list numso)
+{
+	unsigned int n, n2, i = 0, dig_count = 0;
+	char num[33], dig, aux[33];
+
+	n = va_arg(numso, unsigned int);
+	n2 = n;
+	do {
+		dig = (n2 % 8) + '0';
+		aux[i] = dig;
+		i++;
+		dig_count++;
+		n2 = n2 / 8;
 	} while (n2 != 0);
 	i = 0;
 	for (; i < dig_count; i++)
