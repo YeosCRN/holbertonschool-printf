@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * print_char - funtion to print char
- * @ch: character variable
- * Return: int value
+ * print_char - funtion to print a character
+ * @ch: list
+ * Return: space
  */
 
 int print_char(va_list ch)
@@ -16,9 +16,9 @@ int print_char(va_list ch)
 }
 
 /**
- * print_string - function for print strings
- * @str: string variable
- * Return: int value
+ * print_string - function to print strings
+ * @str: list
+ * Return: space
  */
 
 int print_string(va_list str)
@@ -40,9 +40,9 @@ int print_string(va_list str)
 	return (j);
 }
 /**
- * print_number - function for print numbers
- * @totals: total numbers
- * Return: number
+ * print_number - function to print numbers
+ * @totals: list
+ * Return: space
  */
 int print_number(va_list totals)
 {
@@ -87,7 +87,11 @@ int print_number(va_list totals)
 	write(1, &num[0], dig_count);
 	return (dig_count);
 }
-
+/**
+ * print_binary - function to print binary numbers
+ * @nums: list
+ * Return: space
+ */
 int print_binary(va_list nums)
 {
 	unsigned int n, n2, i = 0, dig_count = 0;
@@ -95,8 +99,7 @@ int print_binary(va_list nums)
 
 	n = va_arg(nums, unsigned int);
 	n2 = n;
-	do
-	{
+	do {
 		dig = (n2 % 2) + '0';
 		aux[i] = dig;
 		i++;
