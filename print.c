@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(list, format);
-	redic = print_op(format, cases, list);
+	redic = selec_funct(format, cases, list);
 	va_end(list);
 	return (redic);
 }
