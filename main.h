@@ -13,7 +13,7 @@ typedef struct tds
 	int (*f)();
 } tds_t;
 int _printf(const char *format, ...);
-int print_op(const char *format, tds_t *getfunct, va_list cases);
+int selec_funct(const char *format, tds_t *getfunct, va_list list);
 int print_char(va_list ch);
 int print_string(va_list str);
 int print_number(va_list nums);

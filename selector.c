@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * print_op - function selector
- * @format: punter with the format
- * @print_arr: array printer
+ * selec_funct - function selector
+ * @format: pointer with the format
+ * @getfunct: get right funct
  * @list: list
- * Return: int number
+ * Return: count
  */
-int print_op(const char *format, tds_t *getfunct, va_list list)
+int selec_funct(const char *format, tds_t *getfunct, va_list list)
 {
 	char x;
 	int count = 0, y = 0, z = 0;
