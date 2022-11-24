@@ -13,9 +13,10 @@ typedef struct tds
 	int (*f)();
 } tds_t;
 int _printf(const char *format, ...);
-int print_op(const char *format, tds_t *print_arr, va_list cases);
+int print_op(const char *format, tds_t *getfunct, va_list cases);
 int print_char(va_list ch);
 int print_string(va_list str);
 int print_number(va_list nums);
+int print_binary(va_list totals);
 
 #endif

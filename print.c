@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 		{"s", print_string},
 		{"d", print_number},
 		{"i", print_number},
+		{"b", print_binary},
 		{NULL, NULL}};
 
 	if (format == NULL)

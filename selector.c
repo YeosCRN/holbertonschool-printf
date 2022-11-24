@@ -6,7 +6,7 @@
  * @list: list
  * Return: int number
  */
-int print_op(const char *format, tds_t *print_arr, va_list list)
+int print_op(const char *format, tds_t *getfunct, va_list list)
 {
 	char x;
 	int count = 0, y = 0, z = 0;
@@ -19,11 +19,11 @@ int print_op(const char *format, tds_t *print_arr, va_list list)
 			z = 0;
 			y++;
 			x = format[y];
-			while (print_arr[z].type != NULL &&
-				   x != *(print_arr[z].type))
+			while (getfunct[z].type != NULL &&
+				   x != *(getfunct[z].type))
 				z++;
-			if (print_arr[z].type != NULL)
-				count = count + print_arr[z].f(list);
+			if (getfunct[z].type != NULL)
+				count = count + getfunct[z].f(list);
 			else
 			{
 				if (x == '\0')

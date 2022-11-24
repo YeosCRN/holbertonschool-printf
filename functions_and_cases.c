@@ -87,3 +87,27 @@ int print_number(va_list totals)
 	write(1, &num[0], dig_count);
 	return (dig_count);
 }
+
+int print_binary(va_list nums)
+{
+	unsigned int n, n2, i = 0, dig_count = 0;
+	char num[33], dig, aux[33];
+
+	n = va_arg(nums, unsigned int);
+	n2 = n;
+	do
+	{
+		dig = (n2 % 2) + '0';
+		aux[i] = dig;
+		i++;
+		dig_count++;
+		n2 = n2 / 2;
+	} while (n2 != 0);
+	i = 0;
+	for (; i < dig_count; i++)
+	{
+		num[i] = aux[dig_count - i - 1];
+		write(1, &num[i], 1);
+	}
+	return (dig_count);
+}
